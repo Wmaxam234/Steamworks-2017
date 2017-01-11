@@ -14,6 +14,10 @@ public:
 		chooser.AddDefault(autoNameDefault, autoNameDefault);
 		chooser.AddObject(autoNameCustom, autoNameCustom);
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
+		backMotorRight = new CANTalon(4);
+		backMotorLeft = new CANTalon(3);
+		forwardMotorRight = new CANTalon(2);
+		forwardMotorLeft = new CANTalon(1);
 	}
 
 	/*
@@ -66,10 +70,10 @@ private:
 	const std::string autoNameCustom = "My Auto";
 	std::string autoSelected;
 	//Motors
-	CANTalon forwardMotorLeft = new CANTalon(1);
-	CANTalon forwardMotorRight = new CANTalon(2);
-	CANTalon backMotorLeft = new CANTalon(3);
-	CANTalon backMotorRight = new CANTalon(4);
+	CANTalon forwardMotorLeft;
+	CANTalon forwardMotorRight;
+	CANTalon backMotorLeft;
+	CANTalon backMotorRight;
 };
 
 START_ROBOT_CLASS(Robot)
