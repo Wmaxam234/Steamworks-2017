@@ -65,6 +65,11 @@ private:
 	const std::string autoNameDefault = "Default";
 	const std::string autoNameCustom = "My Auto";
 	std::string autoSelected;
+	//Motors
+	CANTalon forwardMotorLeft = new CANTalon(1);
+	CANTalon forwardMotorRight = new CANTalon(2);
+	CANTalon backMotorLeft = new CANTalon(3);
+	CANTalon backMotorRight = new CANTalon(4);
 };
 
 START_ROBOT_CLASS(Robot)
